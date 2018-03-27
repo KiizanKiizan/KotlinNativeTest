@@ -1,0 +1,19 @@
+buildscript {
+    ext.kotlin_native_version = '0.6.1'
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies"
+        }
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$kotlin_native_version"
+    }
+}
+group 'nz.salect'
+version '0.1'
+apply plugin: "konan"
+konan.targets = ["iphone", "iphone_sim"]
+konanArtifacts {
+    framework('TestNativeLibs')
+}
