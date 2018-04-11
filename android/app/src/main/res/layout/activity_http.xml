@@ -1,0 +1,24 @@
+<layout>
+    <data>
+        <variable name="event" type="jp.co.kiizan_kiizan.kotlinnativetest.ui.http.HttpActivityEvent" />
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/http_get_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GET"
+            android:onClick="@{event.onClickGetButton}"/>
+
+        <TextView
+            android:id="@+id/http_response_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/http_get_button" />
+
+    </RelativeLayout>
+</layout>

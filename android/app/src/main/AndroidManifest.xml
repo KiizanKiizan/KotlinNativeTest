@@ -18,6 +18,8 @@
         </activity>
         <activity android:name="jp.co.kiizan_kiizan.kotlinnativetest.ui.kotlins_birthday.KotlinsBirthdayActivity">
         </activity>
+        <activity android:name="jp.co.kiizan_kiizan.kotlinnativetest.ui.http.HttpActivity">
+        </activity>
     </application>
 
 </manifest>

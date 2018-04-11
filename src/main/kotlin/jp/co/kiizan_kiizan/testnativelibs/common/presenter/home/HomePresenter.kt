@@ -15,6 +15,7 @@ class HomePresenter {
 
         when(menu) {
             HomeMenu.KotlinsBirthday -> {homeView?.toKotlinsBirthdayActivity()}
+            HomeMenu.Http -> {homeView?.toHttpActivity()}
         }
     }
 }

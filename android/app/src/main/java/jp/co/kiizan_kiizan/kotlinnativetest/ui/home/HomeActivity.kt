@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.AdapterView
 import jp.co.kiizan_kiizan.kotlinnativetest.R
 import jp.co.kiizan_kiizan.kotlinnativetest.databinding.ActivityHomeBinding
+import jp.co.kiizan_kiizan.kotlinnativetest.ui.http.HttpActivity
 import jp.co.kiizan_kiizan.kotlinnativetest.ui.kotlins_birthday.KotlinsBirthdayActivity
 import jp.co.kiizan_kiizan.testnativelibs.common.presenter.home.HomeListPresenter
 import jp.co.kiizan_kiizan.testnativelibs.common.presenter.home.HomePresenter
@@ -46,6 +47,11 @@ class HomeActivity : Activity(), HomeView, AdapterView.OnItemClickListener {
 
     override fun toKotlinsBirthdayActivity() {
         val intent = Intent(this, KotlinsBirthdayActivity::class.java)
+        startActivity(intent)
+    }
+
+    override fun toHttpActivity() {
+        val intent = Intent(this, HttpActivity::class.java)
         startActivity(intent)
     }
 }
